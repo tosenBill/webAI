@@ -5,15 +5,6 @@ import type { UploadFile } from 'element-plus'
 import { removeBackground } from '@imgly/background-removal'
 type image_src = ImageData | ArrayBuffer | Uint8Array | Blob | URL | string
 
-const testFetch = async () => {
-  const url =
-    'https://staticimgly.com/@imgly/background-removal-data/1.5.5/dist/f27ae13d9f59f61a6a1b5d9a91c203f2c613346083f02072c27c91672ccda8cf'
-  const response = await fetch(url)
-  console.log('reponse', response)
-}
-
-testFetch()
-
 // 选择图片
 const orginImg = ref<Blob | string>('')
 const uploadImg = (file: UploadFile) => {
